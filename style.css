@@ -98,7 +98,7 @@ header{
 }
 
 .hero-content h1{
-    font-size:5rem;
+   font-size:clamp(2.5rem,6vw,5rem);
     font-weight:800;
     background:linear-gradient(
     90deg,
@@ -111,7 +111,7 @@ header{
 }
 
 .hero-content h3{
-    font-size:2rem;
+    font-size:clamp(1.2rem,3vw,2rem);
     margin:15px 0;
     color:#60a5fa;
 }
@@ -151,6 +151,8 @@ header{
     margin-top:30px;
     display:flex;
     gap:15px;
+    justify-content: center;
+    text-align: center;
 }
 
 .social-icons a{
@@ -172,11 +174,10 @@ header{
 }
 
 .hero-image img{
-    width:500px;
-   
-    
+    width:100%;
+    max-width:500px;
+    height:auto;
 }
-
 /* ===========================
    SECTION COMMON
 =========================== */
@@ -310,7 +311,7 @@ min-height:90px;
     color:#cbd5e1;
 }
 
-..about-buttons{
+.about-buttons{
 
     display:flex;
 
@@ -376,7 +377,7 @@ min-height:90px;
 
 .section-title h2{
 
-    font-size:48px;
+   font-size:clamp(2rem,5vw,3rem);
     color:white;
 }
 
@@ -882,4 +883,97 @@ body{
 .contact-item a{
     color:#fff;
     text-decoration:none;
+}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .resume-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:120px 20px 60px;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-content h3{
+        font-size:1.5rem;
+    }
+
+    .hero-description{
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-image img{
+        width:250px;
+        max-width:100%;
+    }
+
+    .about-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-highlights{
+        grid-template-columns:1fr;
+    }
+
+    .about-stats{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .skills-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .professional-card{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .project-card img{
+        height:220px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    section{
+        padding:80px 20px;
+    }
+
 }
