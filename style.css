@@ -25,13 +25,14 @@ body{
 header{
     position:fixed;
     width:100%;
-    top:0;
+    top: 0;
     z-index:1000;
     background:rgba(7,11,23,0.9);
     backdrop-filter:blur(15px);
 }
 
 .navbar{
+
     width:90%;
     margin:auto;
     display:flex;
@@ -85,6 +86,7 @@ header{
 =========================== */
 
 .hero{
+    /* margin-top:7%; */
     min-height:100vh;
     display:flex;
     justify-content:space-between;
@@ -174,6 +176,7 @@ header{
 }
 
 .hero-image img{
+    margin-top:70px;
     width:100%;
     max-width:500px;
     height:auto;
@@ -930,10 +933,16 @@ body{
         align-items:center;
     }
 
-    .hero-image img{
-        width:250px;
-        max-width:100%;
-    }
+    .hero-image{
+    margin-bottom:20px;
+}
+
+.hero-image img{
+    width:280px;
+    max-width:90%;
+    height:auto;
+    object-fit:contain;
+}
 
     .about-container{
         grid-template-columns:1fr;
